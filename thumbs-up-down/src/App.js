@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Vote from './components/Vote';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles = {
+  thumbUpCount: {
+    marginLeft: '15px',
+  }
+}
+class App extends React.Component {
+  state = {
+    up: 0,
+    down: 0,
+  }
+
+  upVote = () => {
+    let { up } = this.state;
+    up++;
+    this.setState({up})
+  }
+
+  render() {
+    return (
+      <div>
+        <Vote icon="fa fa-thumbs-up" count={0}></Vote>
+        <Vote icon="fa fa-thumbs-down" count={0}></Vote>
+      </div>
+    )
+  }
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       <i onClick={this.upVote} className="fa fa-thumbs-up"></i>
+  //       <span style={styles.thumbUpCount}>{this.state.up}</span>
+  //     </div>
+  //   );
+  // }
 }
 
 export default App;
