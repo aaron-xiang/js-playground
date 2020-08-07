@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.clock {
+  margin: auto;
+  border: 2px solid blue;
+  width: 300px;
+  margin-top: 200px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: lightgray;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
