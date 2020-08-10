@@ -58,7 +58,12 @@ function App() {
   //     </div>
   //   </div>
   // );
-  return <StopWatch />;
+  return (
+    <div>
+      <StopWatch />
+      <StopWatch />
+    </div>
+  );
 }
 
 export default App;

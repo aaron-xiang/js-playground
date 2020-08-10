@@ -53,3 +53,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@font-face {
+  font-family: 'LCD';
+  src: local('LCD'), url(./fonts/DS-DIGIT.TTF) format('truetype');
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}

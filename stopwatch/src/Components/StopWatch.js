@@ -2,12 +2,38 @@ import React, { Component } from "react";
 
 const styles = {
   container: {
+    display: "flex",
+    flexDirection: "column",
     border: "2px solid blue",
+    borderRadius: "10px",
+    padding: "20px",
     margin: "auto",
-    width: "150px"
+    width: "180px",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  display: {},
-  control: {},
+  display: {
+    fontFamily: "LCD",
+    fontSize: "2em",
+    border: "1px solid black",
+    padding: "10px",
+    backgroundColor: "lightgray",
+    marginBottom: "15px",
+    width: "150px",
+    borderRadius: "5px",
+  },
+  control: {
+    display: "flex",
+    width: "150px",
+    justifyContent: "space-between",
+  },
+  button: {
+    width: "50px",
+    height: "50px",
+    border: "1px solid black",
+    borderRadius: "50%",
+    cursor: "pointer",
+  },
 };
 
 function pad(num, size) {
@@ -61,10 +87,12 @@ export class StopWatch extends Component {
       <div style={styles.container}>
         <div style={styles.display}>{`${hh}:${mm}:${ss}:${ms}`}</div>
         <div style={styles.control}>
-          <button onClick={this.handleClick}>
+          <button style={styles.button} onClick={this.handleClick}>
             {isStarted ? "Stop" : "Start"}
           </button>
-          <button onClick={this.reset}>Reset</button>
+          <button style={styles.button} onClick={this.reset}>
+            Reset
+          </button>
         </div>
       </div>
     );
