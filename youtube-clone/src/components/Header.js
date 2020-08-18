@@ -58,7 +58,7 @@ const ToolBar = styled.div`
 function Header(props) {
   return (
     <View>
-      <IconButton icon="bars" />
+      <IconButton icon="bars" onClick={props.toggle} />
       <Logo src={logo} />
       <SearchBox>
         <Input />
